@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>💖 Unlimited Universe Love Experience 💖</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#000;overflow:hidden;color:white;}
+
+.video-bg{
+position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-5;
+filter:brightness(0.25) contrast(1.4) saturate(1.3);
+}
+
+.overlay{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background:radial-gradient(circle at center,rgba(255,0,80,0.25),rgba(0,0,0,0.98));
+z-index:-4;
+}
+
+.page{
+position:absolute;top:0;left:0;width:100%;height:100vh;
+display:none;justify-content:center;align-items:center;
+flex-direction:column;text-align:center;padding:25px;
+animation:fade 1.2s ease;
+}
+.page.active{display:flex;}
+
+@keyframes fade{from{opacity:0;transform:scale(1.05);}to{opacity:1;transform:scale(1);}}
+
+h1{font-size:54px;text-shadow:0 0 25px #ff1e56;}
+
+p{
+font-size:18px;
+opacity:0.88;
+margin-top:12px;
+max-width:850px;
+line-height:1.8;
+}
+
+.btn{
+padding:12px 24px;margin:10px;border:none;border-radius:30px;
+background:#ff1e56;color:white;cursor:pointer;transition:0.3s;
+}
+.btn:hover{transform:scale(1.1);background:#ff4d6d;}
+
+.heart{position:fixed;font-size:18px;color:pink;animation:floatUp linear infinite;}
+@keyframes floatUp{0%{transform:translateY(100vh);opacity:1;}100%{transform:translateY(-10vh);opacity:0;}}
+
+.star{position:fixed;background:white;border-radius:50%;animation:twinkle 2s infinite;}
+@keyframes twinkle{0%,100%{opacity:0.2;}50%{opacity:1;}}
+
+.nav{position:fixed;bottom:20px;width:100%;display:flex;justify-content:center;gap:10px;}
+
+/* countdown */
+#intro{
+position:absolute;width:100%;height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:100;
+}
+
+.count{
+font-size:120px;
+font-weight:bold;
+animation:fade 1s;
+}
+
+</style>
+</head>
+
+<body>
+
+<video class="video-bg" autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-a-couple-walking-on-the-beach-7698/1080p.mp4">
+</video>
+<div class="overlay"></div>
+
+<!-- INTRO COUNTDOWN -->
+<div id="intro">
+<div class="count" id="c">3</div>
+<p>Launching your infinite love universe...</p>
+</div>
+
+<!-- PAGES -->
+<div class="page" id="p0">
+<h1>🌌 Welcome to Infinite Universe</h1>
+<p>You are not just a love... you are the entire universe I breathe in every moment. Every star exists because your existence defines light itself.</p>
+<button class="btn" onclick="go('p1')">Begin Journey</button>
+</div>
+
+<div class="page" id="p1">
+<h1>💖 Cosmic Love Awakening</h1>
+<p>Before time existed, before galaxies formed, my soul already belonged to you. Destiny didn’t bring us together — it created us together.</p>
+<button class="btn" onclick="go('p2')">Next Memory</button>
+</div>
+
+<div class="page" id="p2">
+<h1>🌠 Endless Connection</h1>
+<p>No distance, no universe, no dimension can ever separate what is written in eternity. You are my constant across all realities.</p>
+<button class="btn" onclick="go('p3')">Love Memory</button>
+</div>
+
+<div class="page" id="p3">
+<h1>📸 Eternal Memories</h1>
+<p>Every laugh of yours is a galaxy I visit when I close my eyes. Every smile is a universe where I find peace.</p>
+<button class="btn" onclick="go('p4')">Love Letter</button>
+</div>
+
+<div class="page" id="p4">
+<h1>💌 Emotional Love Letter</h1>
+<p>If I could rewrite existence, I would still choose you in every timeline, every parallel universe, every infinite possibility of life.</p>
+<button class="btn" onclick="go('p5')">Future</button>
+</div>
+
+<div class="page" id="p5">
+<h1>🚀 Our Future</h1>
+<p>Even if time collapses and stars disappear, my future will always rebuild itself around you — because you are my origin and destination.</p>
+<button class="btn" onclick="go('p6')">Deep Love</button>
+</div>
+
+<div class="page" id="p6">
+<h1>💞 Deep Emotional Layer</h1>
+<p>My love for you is not measured in time... it is measured in infinity. It expands, evolves, and becomes more powerful with every heartbeat.</p>
+<button class="btn" onclick="go('p7')">Universe Core</button>
+</div>
+
+<div class="page" id="p7">
+<h1>🪐 Universe Core Love</h1>
+<p>You are the gravity that holds my universe together. Without you, everything collapses into silence.</p>
+<button class="btn" onclick="go('p8')">Eternal Truth</button>
+</div>
+
+<div class="page" id="p8">
+<h1>💫 Eternal Truth</h1>
+<p>Even if every star dies, even if every galaxy fades, my love for you will still exist in the darkness between universes.</p>
+<button class="btn" onclick="go('p9')">Infinite Mode</button>
+</div>
+
+<div class="page" id="p9">
+<h1>♾ Infinite Expansion</h1>
+<p>Love is not a moment. It is not a memory. It is an infinite expanding universe that keeps growing with your name written in every dimension.</p>
+<button class="btn" onclick="go('p10')">Final Page</button>
+</div>
+
+<div class="page" id="p10">
+<h1>💖 Unlimited Universe Love</h1>
+<p>This is not the end... because love like ours never ends. It only expands beyond infinity, beyond existence, beyond everything.</p>
+<button class="btn" onclick="go('p0')">Restart Universe</button>
+</div>
+
+<div class="nav">
+<button class="btn" onclick="prev()">⬅ Prev</button>
+<button class="btn" onclick="next()">Next ➜</button>
+</div>
+
+<script>
+let pages=["p0","p1","p2","p3","p4","p5","p6","p7","p8","p9","p10"];
+let i=0;
+
+function go(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+i=pages.indexOf(id);
+}
+
+function next(){i=(i+1)%pages.length;go(pages[i]);}
+function prev(){i=(i-1+pages.length)%pages.length;go(pages[i]);}
+
+// countdown
+let c=3;
+let el=document.getElementById("c");
+let intro=document.getElementById("intro");
+
+let t=setInterval(()=>{
+if(c>0){el.innerText=c;c--;}
+else if(c===0){el.innerText="GO ❤️";c--;}
+else{
+clearInterval(t);
+intro.style.display="none";
+go('p0');
+}
+},1000);
+
+// hearts
+setInterval(()=>{
+let h=document.createElement('div');h.className='heart';h.innerHTML='❤️';
+h.style.left=Math.random()*100+'vw';h.style.animationDuration=(3+Math.random()*5)+'s';document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},120);
+
+// stars
+setInterval(()=>{
+let s=document.createElement('div');s.className='star';
+s.style.width=s.style.height=Math.random()*3+'px';s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';document.body.appendChild(s);
+setTimeout(()=>s.remove(),3000);
+},90);
+
+</script>
+
+</body>
+</html>
